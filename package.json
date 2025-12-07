@@ -1,0 +1,37 @@
+{
+    "name": "eldercare-monitor",
+    "version": "1.0.0",
+    "description": "ElderCare Monitor - Complete System (Web + Mobile + Server)",
+    "main": "index.html",
+    "scripts": {
+        "backup": "powershell -ExecutionPolicy Bypass -File backup.ps1",
+        "test": "node test-integration.js",
+        "server": "cd server && npm start",
+        "server:install": "cd server && npm install",
+        "simulate": "cd server && node sensor-simulator.js demo",
+        "simulate:normal": "cd server && node sensor-simulator.js normal",
+        "simulate:fall": "cd server && node sensor-simulator.js fall",
+        "simulate:apnea": "cd server && node sensor-simulator.js apnea",
+        "simulate:random": "cd server && node sensor-simulator.js random"
+    },
+    "keywords": [
+        "eldercare",
+        "monitoring",
+        "healthcare",
+        "iot",
+        "mmwave",
+        "sensor",
+        "fall-detection",
+        "apnea-detection"
+    ],
+    "author": "ElderCare Team",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^1.6.2",
+        "ws": "^8.14.2"
+    },
+    "devDependencies": {},
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}
